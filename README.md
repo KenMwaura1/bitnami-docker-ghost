@@ -74,7 +74,7 @@ Ghost requires access to a MySQL or MariaDB database to store information. We'll
 
 ### Run the application using Docker Compose
 
-The main folder of this repository contains a functional [`docker-compose.yml`](https://github.com/bitnami/bitnami-docker-ghost/blob/master/docker-compose.yml) file. Run the application using it as shown below:
+The main folder of this repository contains a functional [`docker-compose.yml`](https://github.com/KenMwaura1/bitnami-docker-ghost/blob/master/docker-compose.yml) file. Run the application using it as shown below:
 
 ```console
 $ curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-ghost/master/docker-compose.yml > docker-compose.yml
@@ -126,7 +126,7 @@ Access your application at *http://your-ip/*
 
 If you remove the container all your data will be lost, and the next time you run the image the database will be reinitialized. To avoid this loss of data, you should mount a volume that will persist even after the container is removed.
 
-For persistence you should mount a directory at the `/bitnami/ghost` path. If the mounted directory is empty, it will be initialized on the first run. Additionally you should [mount a volume for persistence of the MariaDB data](https://github.com/bitnami/bitnami-docker-mariadb#persisting-your-database).
+For persistence you should mount a directory at the `/bitnami/ghost` path. If the mounted directory is empty, it will be initialized on the first run. Additionally you should [mount a volume for persistence of the MariaDB data](https://github.com/KenMwaura1/bitnami-docker-mariadb#persisting-your-database).
 
 The above examples define the Docker volumes named `mariadb_data` and `ghost_data`. The Ghost application state will persist as long as volumes are not removed.
 
@@ -134,7 +134,7 @@ To avoid inadvertent removal of volumes, you can [mount host directories as data
 
 ### Mount host directories as data volumes with Docker Compose
 
-This requires a minor change to the [`docker-compose.yml`](https://github.com/bitnami/bitnami-docker-ghost/blob/master/docker-compose.yml) file present in this repository:
+This requires a minor change to the [`docker-compose.yml`](https://github.com/KenMwaura1/bitnami-docker-ghost/blob/master/docker-compose.yml) file present in this repository:
 
 ```diff
    mariadb:
@@ -199,7 +199,7 @@ $ docker run -d --name ghost \
 
 When you start the Ghost image, you can adjust the configuration of the instance by passing one or more environment variables either on the docker-compose file or on the `docker run` command line. If you want to add a new environment variable:
 
-- For docker-compose add the variable name and value under the application section in the [`docker-compose.yml`](https://github.com/bitnami/bitnami-docker-ghost/blob/master/docker-compose.yml) file present in this repository:
+- For docker-compose add the variable name and value under the application section in the [`docker-compose.yml`](https://github.com/KenMwaura1/bitnami-docker-ghost/blob/master/docker-compose.yml) file present in this repository:
 
     ```yaml
     ghost:
